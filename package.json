@@ -1,0 +1,37 @@
+{
+  "name": "eps-easy-peasy-stock",
+  "version": "0.6.1",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "test:catalog": "node --test tests/stock-catalog.test.mjs",
+    "lint": "eslint .",
+    "test:quotes": "node --experimental-strip-types --test tests/market-quotes.test.mjs tests/market-session.test.mjs tests/fsc-stock-quote.test.mjs",
+    "test:dashboard": "node --experimental-strip-types --test tests/portfolio-analytics.test.mjs tests/fx-rates.test.mjs",
+    "test:directory": "node --experimental-strip-types --test tests/stock-directory.test.mjs tests/dual-currency.test.mjs",
+    "test:vision": "node --experimental-strip-types --test tests/vision-extraction.test.mjs"
+  },
+  "dependencies": {
+    "@supabase/ssr": "^0.12.7",
+    "@supabase/supabase-js": "^2.119.0",
+    "lucide-react": "^1.72.0",
+    "next": "^16.0.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.0",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "eslint": "^9.0.0",
+    "eslint-config-next": "^16.0.0",
+    "postcss": "^8.5.0",
+    "tailwindcss": "^4.1.0",
+    "typescript": "^5.8.0"
+  }
+}
