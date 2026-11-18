@@ -75,3 +75,18 @@ npm.cmd run build
 - `src/app/api/vision/extract/route.ts`: Gemini Vision 백엔드 Route Handler
 - `src/lib/vision-extraction.ts`: JSON Schema, Zod 검증, 파일 시그니처 검증, 저장 전 유효성 검사
 - `tests/vision-extraction.test.mjs`: OCR 결과 검증 및 유효성 테스트
+
+## 프로젝트 개발 현황 (In Progress)
+
+### 구현 및 검증 완료
+- Next.js, React, TypeScript 기반 웹 애플리케이션
+- Supabase Auth 로그인 기능
+- Supabase 보유 종목 CRUD
+- 새로고침 이후 데이터 유지 확인
+- 데이터베이스 저장·수정·삭제 결과 검증
+- GitHub 기반 소스 코드 관리
+
+### 추가 검증 및 개발 예정
+- 이메일 인증 및 다중 계정 테스트
+- 계정별 데이터 접근 권한 검증
+- 추가 기능 구현과 서비스 안정화
