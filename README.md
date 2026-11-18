@@ -1,6 +1,7 @@
-# EPS — Easy Peasy Stock v0.6
+# EPS — Easy Peasy Stock (In Progress)
 
-쉽게 주식을 관리하는 Next.js 16 · React · TypeScript 웹사이트.
+Next.js 16, React, TypeScript, Supabase를 활용한
+개인 주식 관리 웹 애플리케이션입니다.
 
 ## v0.6에서 추가된 기능
 
@@ -9,7 +10,6 @@
 - Gemini JSON Schema 및 서버측 Zod 검증 → 사용자가 추출된 데이터를 수정하고 선택하여 등록
 - 등록이 완료되기 전까지 기존 보유 종목에 쓰지 않음
 - 원본 이미지/마스킹 이미지는 디스크, Supabase, localStorage에 저장하지 않음
-- 데이터는 기존 브라우저 localStorage(`eps.holdings.v1`)에만 저장. **Supabase 로그인·RLS는 아직 미구현**
 - 기존 v0.5 주가, 환율, 한미통화 이중 표시, 검색, 수동 CRUD 유지
 
 ## 설치
@@ -90,3 +90,11 @@ npm.cmd run build
 - 이메일 인증 및 다중 계정 테스트
 - 계정별 데이터 접근 권한 검증
 - 추가 기능 구현과 서비스 안정화
+
+- ## 데이터 관리 구조
+
+- 비로그인 사용자: 브라우저 localStorage 활용
+- 로그인 사용자: Supabase Auth 및 holdings 테이블 활용
+- 보유 종목 CRUD 및 데이터 영속성 테스트 완료
+- 이메일 인증 및 다중 계정 데이터 격리 추가 검증 예정
+- Supabase RLS 정책의 계정별 접근 통제 검증 예정
